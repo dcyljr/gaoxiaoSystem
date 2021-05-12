@@ -3,14 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import api from './http/index'
+import Axios from 'axios'
 import './public/public.css'
 import i18n from './i18n'
 import store from './store'
 
 Vue.config.productionTip = false
+Vue.prototype.$axios = Axios
+Axios.defaults.baseURL = '/api'
+Axios.defaults.headers.post['Content-Type'] = 'application/json'
 
 /* eslint-disable no-new */
 /* new Vue({
