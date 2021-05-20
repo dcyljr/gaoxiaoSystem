@@ -7,6 +7,8 @@ import Notfound from '../views/404.vue'
 import Home from '../views/Home.vue'
 import InfoShow from '../views/InfoShow'
 import OrderList from '../views/OrderList'
+import ContractList from '../views/ContractList'
+import Plane from '../views/Plane'
 
 Vue.use(VueRouter)
 
@@ -38,6 +40,16 @@ const routes = [
         path: '/orderlist',
         name: 'orderlist',
         component: OrderList
+      },
+      {
+        path: '/contractlist',
+        name: 'contractlist',
+        component: ContractList
+      },
+      {
+        path: '/plane',
+        name: 'plane',
+        component: Plane
       }
     ]
   },

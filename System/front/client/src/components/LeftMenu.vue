@@ -31,6 +31,12 @@
             </router-link>
           </el-submenu>
         </template>
+        <router-link to="/plane">
+          <el-menu-item index="1">
+            <i class="fa fa-paper-plane-o"></i>
+            <span slot="title">地区</span>
+          </el-menu-item>
+        </router-link>
       </el-menu>
     </el-col>
   </el-row>
@@ -58,6 +64,12 @@ export default {
           name: "业务员管理",
           path: "info",
           children: [{ path: "infoshow", name: "个人信息" }],
+        },
+        {
+          icon: "fa-file-word-o",
+          name: "合同管理",
+          path: "contract",
+          children: [{ path: "contractlist", name: "合同列表" }],
         },
       ],
     };
