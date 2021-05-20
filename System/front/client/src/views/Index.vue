@@ -1,9 +1,25 @@
 <template>
-  <div class="index">初始化页面</div>
+  <div class="index">
+    <HeadNav></HeadNav>
+    <LeftMenu></LeftMenu>
+    <router-view></router-view>
+  </div>
 </template>
 <script>
+import HeadNav from "../components/HeadNav";
+import LeftMenu from "../components/LeftMenu";
 export default {
   name: "index",
-  components: {}
+  components: {
+    HeadNav,
+    LeftMenu,
+  },
 };
 </script>
+<style scoped>
+.index {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+</style>
