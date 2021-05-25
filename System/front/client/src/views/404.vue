@@ -1,7 +1,6 @@
 <template>
   <div class="notfound">
     <img src="../assets/404.png" alt="" />
-    <p>滚！！！！还不滚？？？？</p>
   </div>
 </template>
 <style scoped>

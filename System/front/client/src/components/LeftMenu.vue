@@ -31,10 +31,16 @@
             </router-link>
           </el-submenu>
         </template>
-        <router-link to="/plane">
+        <router-link to="/point">
           <el-menu-item index="1">
-            <i class="fa fa-paper-plane-o"></i>
-            <span slot="title">地区</span>
+            <i class="fa fa-signal"></i>
+            <span slot="title">点数设置</span>
+          </el-menu-item>
+        </router-link>
+        <router-link to="/commission">
+          <el-menu-item index="1">
+            <i class="fa fa-line-chart"></i>
+            <span slot="title">销售提成</span>
           </el-menu-item>
         </router-link>
       </el-menu>
@@ -48,28 +54,30 @@ export default {
     return {
       items: [
         {
-          icon: "fa-money",
-          name: "订单管理",
-          path: "fund",
+          icon: "fa-users",
+          name: "业务员",
+          path: "salesman",
           children: [
             { path: "orderlist", name: "订单列表" },
+            { path: "drafts", name: "草稿箱" },
             { path: "recycle", name: "订单回收站" },
-            { path: "commission", name: "销售提成" },
-            { path: "payment", name: "回款记录" },
             { path: "achievement", name: "业绩" },
           ],
         },
         {
-          icon: "fa-asterisk",
-          name: "业务员管理",
-          path: "info",
-          children: [{ path: "infoshow", name: "个人信息" }],
+          icon: "fa-industry",
+          name: "财务部",
+          path: "finance",
+          children: [
+            { path: "examine", name: "待审核订单" },
+            { path: "rejected", name: "已驳回订单" },
+          ],
         },
         {
-          icon: "fa-file-word-o",
-          name: "合同管理",
-          path: "contract",
-          children: [{ path: "contractlist", name: "合同列表" }],
+          icon: "fa-thumb-tack",
+          name: "商务部",
+          path: "business",
+          children: [{ path: "determine", name: "待终审订单" }],
         },
       ],
     };

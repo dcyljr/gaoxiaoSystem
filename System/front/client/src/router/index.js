@@ -8,7 +8,7 @@ import Home from '../views/Home.vue'
 import InfoShow from '../views/InfoShow'
 import OrderList from '../views/OrderList'
 import ContractList from '../views/ContractList'
-import Plane from '../views/Plane'
+import Point from '../views/Point'
 
 Vue.use(VueRouter)
 
@@ -47,9 +47,9 @@ const routes = [
         component: ContractList
       },
       {
-        path: '/plane',
-        name: 'plane',
-        component: Plane
+        path: '/point',
+        name: 'point',
+        component: Point
       }
     ]
   },
@@ -77,13 +77,13 @@ const router = new VueRouter({
 })
 
 //路由守卫
-router.beforeEach((to, from, next) => {
-  const isLogin = localStorage.eleToken ? true : false;
-  if (to.path == '/login' || to.path == '/register') {
-    next();
-  } else {
-    isLogin ? next() : next('/login');
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   const isLogin = localStorage.eleToken ? true : false;
+//   if (to.path == '/login' || to.path == '/register') {
+//     next();
+//   } else {
+//     isLogin ? next() : next('/login');
+//   }
+// })
 
 export default router
