@@ -31,18 +31,6 @@
             </router-link>
           </el-submenu>
         </template>
-        <router-link to="/point">
-          <el-menu-item index="1">
-            <i class="fa fa-signal"></i>
-            <span slot="title">点数设置</span>
-          </el-menu-item>
-        </router-link>
-        <router-link to="/commission">
-          <el-menu-item index="1">
-            <i class="fa fa-line-chart"></i>
-            <span slot="title">销售提成</span>
-          </el-menu-item>
-        </router-link>
       </el-menu>
     </el-col>
   </el-row>
@@ -55,29 +43,12 @@ export default {
       items: [
         {
           icon: "fa-users",
-          name: "业务员",
-          path: "salesman",
-          children: [
-            { path: "orderlist", name: "订单列表" },
-            { path: "drafts", name: "草稿箱" },
-            { path: "recycle", name: "订单回收站" },
-            { path: "achievement", name: "业绩" },
-          ],
-        },
-        {
-          icon: "fa-industry",
-          name: "财务部",
-          path: "finance",
-          children: [
-            { path: "examine", name: "待审核订单" },
-            { path: "rejected", name: "已驳回订单" },
-          ],
-        },
-        {
-          icon: "fa-thumb-tack",
-          name: "商务部",
+          name: "业务提成",
           path: "business",
-          children: [{ path: "determine", name: "待终审订单" }],
+          children: [
+            { path: "list", name: "业务列表" },
+            { path: "newbuilt", name: "新建业务" },
+          ],
         },
       ],
     };

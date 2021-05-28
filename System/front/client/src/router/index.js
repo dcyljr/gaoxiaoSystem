@@ -6,9 +6,8 @@ import Login from '../views/Login.vue'
 import Notfound from '../views/404.vue'
 import Home from '../views/Home.vue'
 import InfoShow from '../views/InfoShow'
-import OrderList from '../views/OrderList'
-import ContractList from '../views/ContractList'
-import Point from '../views/Point'
+import List from '../views/List.vue'
+import NewBuilt from '../views/NewBuilt.vue'
 
 Vue.use(VueRouter)
 
@@ -37,19 +36,14 @@ const routes = [
         component: InfoShow
       },
       {
-        path: '/orderlist',
-        name: 'orderlist',
-        component: OrderList
+        path: '/list',
+        name: 'List',
+        component: List
       },
       {
-        path: '/contractlist',
-        name: 'contractlist',
-        component: ContractList
-      },
-      {
-        path: '/point',
-        name: 'point',
-        component: Point
+        path: '/newbuilt',
+        name: 'NewBuilt',
+        component: NewBuilt
       }
     ]
   },
